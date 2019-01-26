@@ -5,8 +5,8 @@ An interactive fiction project created during the [Global Game Jam 2019][ggj]. P
 [ggj]: https://globalgamejam.org
 
 ## Credits
-Illustrations: [David Stark][zarkonnen]
-Concept and Writing: [Kaspar Manz][xeophin]
+- Illustrations: [David Stark][zarkonnen]
+- Concept and Writing: [Kaspar Manz][xeophin]
 
 [zarkonnen]: https://www.zarkonnen.com
 [xeophin]: https://xeophin.net/worlds
