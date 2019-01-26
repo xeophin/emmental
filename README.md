@@ -12,6 +12,6 @@ An interactive fiction project created during the [Global Game Jam 2019][ggj]. P
 [xeophin]: https://xeophin.net/worlds
 
 ## Deployment
-The project is automatically deployed to [its website][loc] using the `.gitlab-ci.yml` file.
+The project is automatically deployed to [its website][loc] using the Github Pages functionality.
 
-[loc]: https://emmental.xeo.li
+[loc]: https://xeophin.github.io/emmental/index.html
