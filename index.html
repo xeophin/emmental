@@ -77,7 +77,9 @@ Es isch dunkel.
 (link-goto: &quot;Du schlafsch.&quot;, (either: ...$wakePassages))</tw-passagedata><tw-passagedata pid="3" name="Handy" tags="" position="209,396" size="100,100">Das Modi chunnt immer mau wieder I sis Zimmer und versorgt ne. Mit dr Zyt cha ner ufstah und es paar Schritt mache. Sis Handy hett zwar no grad e chli Strom, aber er hett ke Verbindig, und da es am Antänne sueche isch, isch es innert chürzi tod.
 [[Dr Wiler]] </tw-passagedata><tw-passagedata pid="4" name="Dr Wiler" tags="" position="56,563" size="200,100">Du luegsch usem Fäischter.
 
-Viu chasch nid gseh, es schynt scho wieder yzdämmere. 
+Viu chasch nid gseh, es schynt scho wieder yzdämmere.
+
+&lt;img src=&quot;pictures/wiler.png&quot;&gt;
 
 Es paar Buurehüser huure sech zwüsche de verzworglete Öpfuböim.
 
@@ -88,6 +90,8 @@ Ds Dach vom Hof so wyt abezoge, dass dr Himmel nid gsesch.
 Du hesch di scho fasch umdräit, wo de us de Ougewinkle e Bewegig gsesch. Du luegsch zrügg, und gsehsch die Frou, wo di pflegt hett, übere Platz loufe, und im Schopf verschwinde.
 
 [[Denn ghörsch, wie d Tür vo dim Zimmer ufgeit.-&gt;d Tür geit uf]]</tw-passagedata><tw-passagedata pid="5" name="Bluet" tags="" position="393,352" size="200,100">E stächende Schmärz i dim Ungerarm. Du stöhnsch uf.
+
+(if: $recovery &gt; 4)[&lt;img src=&quot;pictures/arm.png&quot;&gt;]
 
 (if: $recovery &gt; 2)[Gspürsch e Hand uf dim Arm.]
 (if: $recovery &gt; 3)[Wie Bluet aberinnt.]
@@ -123,6 +127,8 @@ Ersch itz gseht, was zwüsche dir und däm Ei ono ligt. E gköpfte Güggel. Und 
 
 Ds Ei bewegt sech.
 
+&lt;img src=&quot;pictures/ei.png&quot;&gt;
+
 Es Knirsche und Knacke. Über z Ei zieht sech e Spalt, wo schnäu grösser wird. Du chasch nid angersch aus zueluege.
 
 Ds Ei bricht uf, und ir Schale ligt, erschöpft und no vou Schliim, e Frou. Si gseht genau gliich us wie aui Froue um se ume.
@@ -141,6 +147,8 @@ Si gorpset. Si hett a Stärchi gwunne. Aber no hett si nid aui Stärchi wo si br
 
 Si luegt uf.
 
+&lt;img src=&quot;pictures/modi_bluet.png&quot;&gt;
+
 [[Und lächlet di a]].
 
 
@@ -152,6 +160,8 @@ Du ghörsch d Stimme vo do Froue hinder dir. Wäg. I Wald. Wo se chasch abschüt
 (display: &quot;Flucht&quot;)
 
 Du ghörsch Hünd hinter dir bälle.
+
+&lt;img src=&quot;pictures/hund.png&quot;&gt;
 
 [[Und denn, e Stimm-&gt;Rettig]].</tw-passagedata><tw-passagedata pid="8" name="Rettig" tags="" position="400,1225" size="100,100">Hindereme Boum toucht eini vo de Froue uf.
 
@@ -217,6 +227,8 @@ Zletschte Mal wo über die Höger gfahre bisch, bisch no ufem Rücksitz ghocket,
 
 Du biegsch vo dr Houptstrass im Tal ab und biegsch i das schmale Strässli i, wo di scho bald ine Wald füehrt. Ds Strässli windet sech em Hang entlag em Hoger ufe. Nachere Spitzcheri chunnsch usem Wald use und weisch, dass es sech glohnt hett, dä Umwäg z mache.
 
+&lt;img src=&quot;pictures/auto.png&quot;&gt;
+
 [[Du schteusch dr Chare a Rand vor Strass.]] Oder [[du fahrsch wyter]].</tw-passagedata><tw-passagedata pid="12" name="Du schteusch dr Chare a Rand vor Strass." tags="" position="600,375" size="100,100">Du steusch dr Chare a Rand vor Strass, schteusch dr Motor ab und stygsch us.
 
 Im letschte Liecht vo dr Sunne fö die verschneite, sanft gschwungnige Hügle guldig afa lüüchte. Der Schnee näb dr Strass überzieht es Glitzere vo tuusige chline Diamante. D Wolche si bluetroti Striche voreme unändlech töif blaue Himmel.
@@ -251,7 +263,9 @@ Aber dr Schnee und z Schmelzwasser si so gschlifrig, dass d Reife ke Halt finge,
 
 (set: $brakes to it + 1)
 (if: $brakes is &gt;= 3)[ [[Dis Outo überrollt sech]] ]
-(if: $brakes is &lt; 3)[ [[Brämse!-&gt;Bremsen]] ]</tw-passagedata><tw-passagedata pid="18" name="Strasse weg" tags="" position="680,919" size="100,100">Plötzlech isch vor dir d Strass wäg.
+(if: $brakes is &lt; 3)[ [[Brämse!-&gt;Bremsen]] ]</tw-passagedata><tw-passagedata pid="18" name="Strasse weg" tags="" position="680,919" size="100,100">&lt;img src=&quot;pictures/unfall.png&quot;&gt;
+
+Plötzlech isch vor dir d Strass wäg.
 
 Es gähnends Loch.
 
@@ -285,7 +299,10 @@ Schmärz explodiert
 
 
 
-[[es wird dunku-&gt;Dunkel]] </tw-passagedata><tw-passagedata pid="20" name="Dis Zimmer" tags="" position="46,91" size="100,100">Wachsch uf.
+[[es wird dunku-&gt;Dunkel]] </tw-passagedata><tw-passagedata pid="20" name="Dis Zimmer" tags="" position="46,91" size="100,100">(if: $recovery &gt; 3 and $recovery &lt;= 5)[&lt;img src=&quot;pictures/zimmer_dunkel.png&quot;&gt;]
+(if: $recovrey &gt; 5)[&lt;img src=&quot;pictures/zimmer.png&quot;&gt;]
+
+Wachsch uf.
 
 Versuechsch di z bewege(if: $recovery &lt; 2)[, und dumpfi Schmärze brönne sech dür dini Närve wie Lava dür ne Wald](if: $recovery &gt;= 2 and $recovery &lt; 5)[, und es tuet immer no höllisch weh].
 
@@ -307,6 +324,8 @@ Wyt wäg ghörsch e Güggu. Einisch, zwöi mau rüeft er.
 
 Und denn, zmitzt im Ruef, wird er still.
 
+&lt;img src=&quot;pictures/traum.png&quot;&gt;
+
 Es isch sehr still.
 
 Mit eme Ruck wachsch uf. Du bisch bachnass verschwitzt.
@@ -315,6 +334,8 @@ Mit eme Ruck wachsch uf. Du bisch bachnass verschwitzt.
 (link-goto: &quot;…&quot;, (either: ...$wakePassages))</tw-passagedata><tw-passagedata pid="23" name="Chatz" tags="" position="420,194" size="100,100">(display: &quot;Flucht&quot;)
 
 Und denn, e Chatz wo miaut, wid no nie e Chatz ghört hesch.
+
+&lt;img src=&quot;pictures/traum.png&quot;&gt;
 
 Mit eme Ruck wachsch uf – und bereusch es sofort, dini Verletzige mäude sech grad wieder.
 
@@ -336,13 +357,15 @@ Du steisch da i dire Underwäsch, dr Körper übersäit mit Blöiele und Schürf
 
 D Frou zischt di a. Di Hand, wo grad vori no so sanft über di Arm gfahre isch, fixiert di. Du probiersch se abzschüttle, aber es isch, aus wärsch ine Schrubstock gspannt – da isch nüt zmache.
 
-(display: &quot;Alarm&quot;)</tw-passagedata><tw-passagedata pid="26" name="Alarm" tags="" position="544,693" size="100,100">«Still! Oder du verdirbsch aues»
+(display: &quot;Alarm&quot;)</tw-passagedata><tw-passagedata pid="26" name="Alarm" tags="" position="590,683" size="100,100">«Still! Oder du verdirbsch aues»
 
 Di Hand blybt i ihrem Griff, du chasch di nid bewege. Du gsesch, wi dis Bluet dr Arm abrünnelet und i das Chacheli tröpfelet.
 
 Irgendeinisch schynt si gnue z ha, und si laht ab vo dir. Ohni es Wort steit si uf und geit usem Zimmer.
 
-(link-goto: &quot;Dir wird schwarz vor de Ouge.&quot;, (either: ...$sleepPassages))</tw-passagedata><tw-passagedata pid="27" name="Frou" tags="" position="47,737" size="100,100">«Oh, du bisch ungstande!» seit d Frou wo vor dir steit. «I weiss nid, öb das guet isch, du bisch no sehr schwach. Du söttsch besser wieder go schlafe, und di nid aastränge.»
+(link-goto: &quot;Dir wird schwarz vor de Ouge.&quot;, (either: ...$sleepPassages))</tw-passagedata><tw-passagedata pid="27" name="Frou" tags="" position="47,737" size="100,100">&lt;img src=&quot;pictures/modi.png&quot;&gt;
+
+«Oh, du bisch ungstande!» seit d Frou wo vor dir steit. «I weiss nid, öb das guet isch, du bisch no sehr schwach. Du söttsch besser wieder go schlafe, und di nid aastränge.»
 
 (display: &quot;DialogFrau&quot;)</tw-passagedata><tw-passagedata pid="28" name="DialogFrau" tags="" position="120,868" size="100,100">Du muesch meh wüsse.
 
@@ -363,11 +386,15 @@ Irgendeinisch schynt si gnue z ha, und si laht ab vo dir. Ohni es Wort steit si 
 
 Si steut dr es früsches Chacheli Tee häre und geit de usem Zimmer.
 
+&lt;img src=&quot;pictures/tasse.png&quot;&gt;
+
 (display: &quot;Explore Room&quot;)
 (link-goto: &quot;Du geisch zrügg is Bett und schlafsch um di z erhole.&quot;, (either: ...$sleepPassages))</tw-passagedata><tw-passagedata pid="32" name="Explore Room" tags="" position="157,192" size="100,100">[[Wie gsehts äch dusse us?-&gt;Dr Wiler]]
 [[Was isch mit dir passiert?-&gt;Body]]
 &lt;!-- [[Wo isch dis Handy?-&gt;Handy]] --&gt;
-[[Du geisch usem Zimmer use.-&gt;Verschlossnigi Tür]]</tw-passagedata><tw-passagedata pid="33" name="Flucht" tags="" position="268,891" size="100,100">Du rennsch düre Wald. 
+[[Du geisch usem Zimmer use.-&gt;Verschlossnigi Tür]]</tw-passagedata><tw-passagedata pid="33" name="Flucht" tags="" position="268,891" size="100,100">&lt;img src=&quot;pictures/wald.png&quot;&gt;
+
+Du rennsch düre Wald. 
 
 Äscht und Wurzle chralle sich a dir fescht, haute di zrügg, verchratze dr Arme, Gsicht, Bei.
 
@@ -402,9 +429,13 @@ Denn ghörsch Schritte im Gang, und [[d Tür geit uf]].</tw-passagedata><tw-pass
 
 Und denn chunnt si no mau i dis Zimmer.
 
+Und denn no einisch.
+
 Du luegsch vor einte zur andere. Si gseh tupfgenauglych us.
 
-«Oh, dir syt … Zwillinge?» chasch gagse.
+«Oh, dir syt … Drillinge?» chasch gagse.
+
+&lt;img src=&quot;pictures/chlone.png&quot;&gt;
 
 Si luege di unverwandt a.
 
