@@ -27,7 +27,11 @@ tw-story {
   font-feature-settings: normal;
 }
 
-
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
@@ -117,6 +121,8 @@ Es Ei.
 
 Es absurd grosses Ei.
 
+&lt;img src=&quot;pictures/ei.png&quot;&gt;
+
 Du chasch dr kes Tier vorsteue, wones Ei vo dere Grössi chönnt lege. Es chunnt fasch bis zu dine Hüfte, und isch mit bruune Schliirge iideckt.
 
 Di beide Froue drücke di abe, und du geisch vor däm Ei id Chnöi. O jetz lösi di nid los.
@@ -126,8 +132,6 @@ Ersch itz gseht, was zwüsche dir und däm Ei ono ligt. E gköpfte Güggel. Und 
 «Was söu das? Was isch das?», fragsch, aber niemer git dr Antwort.
 
 Ds Ei bewegt sech.
-
-&lt;img src=&quot;pictures/ei.png&quot;&gt;
 
 Es Knirsche und Knacke. Über z Ei zieht sech e Spalt, wo schnäu grösser wird. Du chasch nid angersch aus zueluege.
 
@@ -299,8 +303,8 @@ Schmärz explodiert
 
 
 
-[[es wird dunku-&gt;Dunkel]] </tw-passagedata><tw-passagedata pid="20" name="Dis Zimmer" tags="" position="46,91" size="100,100">(if: $recovery &gt; 3 and $recovery &lt;= 5)[&lt;img src=&quot;pictures/zimmer_dunkel.png&quot;&gt;]
-(if: $recovrey &gt; 5)[&lt;img src=&quot;pictures/zimmer.png&quot;&gt;]
+[[es wird dunku-&gt;Dunkel]] </tw-passagedata><tw-passagedata pid="20" name="Dis Zimmer" tags="" position="46,91" size="100,100">(if: ($recovery &gt; 3) and ($recovery &lt;= 5))[&lt;img src=&quot;pictures/zimmer_dunkel.png&quot;&gt;]
+(if: $recovery &gt; 5)[&lt;img src=&quot;pictures/zimmer.png&quot;&gt;]
 
 Wachsch uf.
 
@@ -310,7 +314,9 @@ Versuechsch di z bewege(if: $recovery &lt; 2)[, und dumpfi Schmärze brönne sec
 
 (if: $recovery &gt; 5)[Dr Schmärz verebbt langsam. Aber es choschtet di immer no so viu Chraft, di o nume es bitzeli ufzrichte. Du luegsch ume. Es chliises Zimmer. (if: $recovery &gt; 6)[E Chachelofe git dr warm. (if: $recovery &gt; 7)[Ar Wand hanget dr Jesus. ] ] ]
 
-(if: $recovery &gt; 7)[Du richtisch di langsam uf. (display: &quot;Explore Room&quot;) (link-goto: &quot;Oder vyllech söttisch no chli schlafe.&quot;, (either: ...$sleepPassages)) ]
+(if: $recovery &gt; 7)[Du richtisch di langsam uf. 
+(display: &quot;Explore Room&quot;) 
+(link-goto: &quot;Oder vyllech söttisch no chli schlafe.&quot;, (either: ...$sleepPassages)) ]
 (else:)[(link-goto: &quot;…&quot;, (either: ...$sleepPassages))]</tw-passagedata><tw-passagedata pid="21" name="Tee" tags="" position="269,265" size="100,100">
 Du bisch wach.
 
