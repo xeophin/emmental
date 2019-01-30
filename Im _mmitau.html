@@ -1,0 +1,605 @@
+<tw-storydata name="Im Ämmitau" startnode="41" creator="Twine" creator-version="2.2.1" ifid="7CE8E687-E1A4-4059-B9C4-AB67E64EFA3D" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,600');
+
+body {
+  background-color: black;
+}
+
+tw-link, a {
+  color: white !important;
+  border-bottom: 1px dotted #FFF;
+  text-decoration: none;
+}
+
+tw-story { 
+  font-family: 'EB Garamond', Garamond, serif;
+  font-feature-settings: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table th {
+  text-align: left;
+}
+
+table td,
+table th {
+  padding: 0 1em 1ex 0;
+}
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+
+</script><tw-tag name="Protagonist" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="725,50" size="100,100">Doch.
+
+Dr Ätti hett sech gfröit, dass ne mau wider bsuecht hesch. Ds Jahr über chunnsch ja meischtens nid drzue – es isch de doch rächt e Strecki bis zu sim Heimetli im Ämmitau. Aber itze, die paar Täg vor Wiehnachte wo dr frei gno hesch, da hett sechs aabotte, ihn mau wieder go z bsueche.
+
+D Höger hetts die letschte Täg mit Schnee überzoge. Aber jetz hett dr Wind dräit. Dr Weschtwind trybt Wolchefätze vor sech häre und holt dr Schnee vo de Tanne, wo schwarzgrau uf de wiise Höger stöh.
+
+Es dunklet langsam y, und du bisch wieder uf em Heiwäg. Natürlech chönntisch itz eifach [[dr Houptstrass entlang]], aber wede scho da bisch, chönnscht o [[über d Höger y]].
+
+(set:$conformity to 0)</tw-passagedata><tw-passagedata pid="2" name="Dunkel" tags="" position="650,1250" size="100,100">{
+(set: $recovery to it + 1)
+}
+Es isch dunkel. (if: $recovery &gt; 4)[Morge? Aabe? Du chasch es nid säge.]
+
+(if: $recovery &lt; 3)[Du … läbsch?](if: $recovery &gt;= 3)[Du läbsch.]
+
+(if: $recovery &lt; 2)[Dis Bluet ruuscht i dine Ohre.](if: $recovery &gt;= 4)[Es isch sehr still hie.]
+
+(link-goto: (either: ...$goToSleepVariations), (either: ...$sleepPassages))
+</tw-passagedata><tw-passagedata pid="3" name="Handy" tags="" position="525,1375" size="100,100">Das Modi chunnt immer mau wieder I sis Zimmer und versorgt ne. Mit dr Zyt cha ner ufstah und es paar Schritt mache. Sis Handy hett zwar no grad e chli Strom, aber er hett ke Verbindig, und da es am Antänne sueche isch, isch es innert chürzi tod.
+[[Dr Wiler]] </tw-passagedata><tw-passagedata pid="4" name="Dr Wiler" tags="" position="400,1375" size="100,100">Du luegsch usem Fäischter.
+
+Viu chasch nid gseh, es schynt scho wieder yzdämmere.
+
+&lt;img src=&quot;pictures/wiler.png&quot;&gt;
+
+Es paar Buurehüser huure sech zwüsche de verzworglete Öpfuböim.
+
+E Schopf. E Hundehütte.
+
+Ds Dach vom Hof so wyt abezoge, dass dr Himmel nid gsesch.
+
+Du hesch di scho fasch umdräit, wo de us de Ougewinkle e Bewegig gsesch. Du luegsch zrügg, und gsehsch die Frou, wo di pflegt hett, übere Platz loufe, und im Schopf verschwinde.
+
+[[Denn ghörsch, wie d Tür vo dim Zimmer ufgeit.-&gt;d Tür geit uf]]</tw-passagedata><tw-passagedata pid="5" name="Bluet" tags="" position="1225,1250" size="100,100">E stächende Schmärz i dim Ungerarm. Du stöhnsch uf.
+{
+(set: $sleepWithoutBlood to $sleepPassages - (a: &quot;Bluet&quot;))
+(if: $recovery &gt; 4)[&lt;img src=&quot;pictures/arm.png&quot;&gt;]
+}
+{
+(if: $recovery &gt; 2)[Gspürsch e Hand uf dim Arm.]
+(if: $recovery &gt; 3)[Wie Bluet aberinnt.]
+(if: $recovery &gt; 4)[Du tuesch dini Ouge uf, und gsesch di Frou a dire Syte stah.]
+(if: $recovery &gt; 5)[Ds Chacheli, wosi under di Arm hett und dis Bluet lat la dri tropfe.]}{
+(if: $recovery &gt; 6)[
+* [[Du ryssisch di Arm zrügg.-&gt;Arm]]
+* [[«Was söu das?!»-&gt;Alarm]]
+]
+* (link-goto: &quot;…&quot;, (either: ...$sleepWithoutBlood))
+}
+
+(set: $recovery to it - 1)
+(set: $blood to it + 1)</tw-passagedata><tw-passagedata pid="6" name="Geburt" tags="" position="887,2111" size="100,100">En einsami Funzle git schwachs Liecht, und du muesch di zersch ad Dunkelheit gwöhne, bevor de gsehsch.
+
+Es hett wyteri Lüt i däm Schopf. Wede zersch meinsch, dass das aues Gschwüschterti müesse si, denn merksch ufe zwöit Blick, dass die Froue, wo da imene Kreis stöh, meh aus nume Familieähnlechkeit verbindet.
+
+Si gseh aui genau glych us. Jedi einzelni e Kopie vo jedere angere.
+
+Das muess e Troum si. Das cha nid ächt si.
+
+Um so meh, woder uffallt, was i dr Mitti vo däm Kreis steit.
+
+Es Ei.
+
+Es absurd grosses Ei.
+
+&lt;img src=&quot;pictures/ei.png&quot;&gt;
+
+Du chasch dr kes Tier vorsteue, wones Ei vo dere Grössi chönnt lege. Es chunnt fasch bis zu dine Hüfte, und isch mit bruune Schliirge iideckt.
+
+Di beide Froue drücke di abe, und du geisch vor däm Ei id Chnöi. O jetz lösi di nid los.
+
+Ersch itz gseht, was zwüsche dir und däm Ei ono ligt. E gköpfte Güggel. Und e toti Chatz. Di Blick gheit uf dr Schnitt i dim Arm, und es faht dr afa dämmere, was die bruune Schliirge uf däm Ei chönnte si.
+
+«Was söu das? Was isch das?», fragsch, aber niemer git dr Antwort.
+
+Ds Ei bewegt sech.
+
+Es Knirsche und Knacke. Über z Ei zieht sech e Spalt, wo schnäu grösser wird. Du chasch nid angersch aus zueluege.
+
+Ds Ei bricht uf, und ir Schale ligt, erschöpft und no vou Schliim, e Frou. Si gseht genau gliich us wie aui Froue um se ume.
+
+Si chüüchet schwär. Ei Frou usem Kreis geit zue re häre und reckt ere dr Güggu. Mit zittrige Händ nimmt si ne.
+
+Bysst dri.
+
+Rupft z Fleisch vo de Chnoche, schlückt, fasch ohni z chöie, mit dr letschte Chraft wore no blybe isch.
+
+Du chasch ere fasch zueluege, wie si stärcher wird.
+
+Si richtet sech ufe aui Vierne uf. Chräsmet uf d Chatz zue. Und schlaht o i die Lych iri Zähn. Es rupft und rysst. Chnoche bräche. Ihres Gsicht isch vo Bluet verschmiert.
+
+Si gorpset. Si hett a Stärchi gwunne. Aber no hett si nid aui Stärchi wo si bruucht.
+
+Si luegt uf.
+
+&lt;img src=&quot;pictures/modi_bluet.png&quot;&gt;
+
+[[Und lächlet di a]].
+
+
+&lt;!-- Si bringene ine Schopf, wo im Strou es grosses Ei ligt. Äs isch iigschmiert mit Bluet (und Sperma?). Si häbe dr P fescht und setze ne vor ds Ei. Das Ei überchunnt langsam Risse und briicht schliesslech uf. Drus use stigt es wyters Meitschi – wieder e Klon vo de angere, wo im Kreis drum ume stöh. Das Nöigebohrene schiint sehr schwach z si am Afang, doch denn nimmt sechs d Hüehnerliich und fahts a frässe. Si wird dütlech stärcher. Denn nimmt si sech d Chatz und isst se o. Und denn wirft si ihre Blick ufe Protagonischt. Dä merkt, dass itz sis letschte Stündli gschlage hett, und schaffts, us dr Jagge z schlüüfe und drvo z renne.--&gt;
+</tw-passagedata><tw-passagedata pid="7" name="Flucht Real" tags="" position="887,2261" size="100,100">Du hesch Glück gha. Du hesch se chönne überrumple. Aber viu Zyt blybt dr nid. Du rennsch wyter, blind, eifach wäg, wäg vo hie.
+
+Du ghörsch d Stimme vo do Froue hinder dir. Wäg. I Wald. Wo se chasch abschüttle.
+
+(display: &quot;Flucht&quot;)
+
+Du ghörsch Hünd hinter dir bälle.
+
+&lt;img src=&quot;pictures/hund.png&quot;&gt;
+
+[[Und denn, e Stimm-&gt;Rettig]].</tw-passagedata><tw-passagedata pid="8" name="Rettig" tags="" position="887,2411" size="100,100">Hindereme Boum toucht eini vo de Froue uf.
+
+«Pscht», bedütet si dr.
+
+Es chönnti die si, wo di pflegt hett, aber sicher bisch dr nid.
+
+Si luegt di lang a. I ihre Hand hett si dini Jagge, aber si macht kener Aastalte si dr z gäh.
+
+Denn, aus hätt si en Entscheidig troffe, dütet si dr e Richtig a.
+
+«Derthäre. De chunnsch zume Dorf. Mach schnäu. I länke se ab.»
+
+Dräit sech um, und secklet drvo, d Jagge hinder sich härschleifend.
+
+Du faasch o wider a seckle. Am Bach entlang. I Richtig [[vom Dorf-&gt;Im Dorf]]
+
+&lt;!-- Da wird er ufgschreckt vo eim vo de Modi. Si luegt ne lang a. Es chönnti die si, wone pflegt hett, aber sicher isch er sech nid. Si zeigt ihm, wo ner muess häreseckle. Si hett zwar sini Jagge i de Häng, aber si git si nem se nid. Stattdesse rennt si drvo, d Jagge hinger sech härschleifend. --&gt;</tw-passagedata><tw-passagedata pid="9" name="Im Dorf" tags="" position="1203,2415" size="100,100">Du bisch dr nid sicher, wie lang dass es geit, bis de zwüsche d Böim gsesch Liechter ufflackere. Si hett di nid aagloge, si hett dr dr Wäg zum Dorf zeigt.
+
+Erschöpft fingsch z gröschte Gebäude im Dorf. Dr Bäre. Natürlech.
+
+Stoglisch id Gaschtschtube. Brichsch ufem Bode zäme.
+
+«Si gseh aui gliich us! Si wärde useme Ei gebore! I bi knapp mit em Läbe drvo cho!»
+
+Händ lüpfe di uf, luege dini Wunde a.
+
+Du verzeusch wyter, du muesch es loswärde.
+
+Lüt rede dürenand.
+
+Wirsch zumene Bett bracht. Überchunnsch Tee.
+
+«Was leit sones riisigs Ei?»
+
+Du ghörsch Sirene. Guet, d Polizei, wo sech drum kümmeret.
+
+En Ambulanz chunnt.
+
+Du wirsch ufene Bare gschnallt. Id Ambulanz verfrachtet.
+
+Ghörsch, wi dr Lüt guet zuerede.
+
+«D Polizei! I muess mit dr Polizei rede! Si bringe Lüt um!»
+
+D Lüt um di ume nicke.
+
+Du wirsch wieder usglade.
+
+Es nöis Gsicht beugt sech über di.
+
+«Es wird aues guet. In Münsige cha nech nüt passiere»
+
+==&gt;&lt;==
+[[//~Credits~//-&gt;Credits]] </tw-passagedata><tw-passagedata pid="10" name="dr Houptstrass entlang" tags="ending" position="875,125" size="100,100">Einisch im Jahr uf Visite bim Ätti: das geit guet. Aber ufene Art bisch immer wieder froh, wede weisch, dass när wieder zrügg id Stadt chasch, wo dr wohler isch. So wohlig dass es isch, wede die Hügle, wodi e Chindheit lang begleitet hei, wieder gsehsch, so hesch doch immer z Gfüeu, dass jederzyt öppis us dene schattige Chräche chönnti usegchräblet cho, und de wird dr immer chli gschmuech.
+
+Du wosch drs säuber nid iigschtah, aber du bisch no so froh wode gsesch dass d Houptstrass gruumt und troche isch. Es hett weni Verchehr, und du chunnsch schnäu vorah, währenddäm am Himmel dr Weschtwind Wolchefätze vor säch här trybt unds langsam fyschter wird.
+
+Es geit nid lang, und du bisch z Burdlef verbi und uf dr Uffahrt uf d Outobahn, wode nimmsch für zrügg id Stadt z fahre.
+
+==&gt;&lt;==
+[[//~Credits~//-&gt;Credits]] 
+
+(set:$conformity to it + 1)</tw-passagedata><tw-passagedata pid="11" name="über d Höger y" tags="" position="725,200" size="100,100">Zletschte Mal wo über die Höger gfahre bisch, bisch no ufem Rücksitz ghocket, und di Vater isch gfahre. Sit däm de es eigets Outo hesch, bisch nie me hie düre gfahre. Itz aber packts di. Die Weschtwindböie mache di fasch e chli übermüetig. Es chribleti i de Bei. E chlyne Umwäg cha nid schade.
+
+Du biegsch vo dr Houptstrass im Tal ab und biegsch i das schmale Strässli i, wo di scho bald ine Wald füehrt. Ds Strässli windet sech em Hang entlag em Hoger ufe. Nachere Spitzcheri chunnsch usem Wald use und weisch, dass es sech glohnt hett, dä Umwäg z mache.
+
+&lt;img src=&quot;pictures/auto.png&quot;&gt;
+
+[[Du schteusch dr Chare a Rand vor Strass.]] Oder [[du fahrsch wyter]].
+
+(set: $conformity to it - 1)</tw-passagedata><tw-passagedata pid="12" name="Du schteusch dr Chare a Rand vor Strass." tags="" position="650,325" size="100,100">Du steusch dr Chare a Rand vor Strass, schteusch dr Motor ab und stygsch us.
+
+Im letschte Liecht vo dr Sunne fö die verschneite, sanft gschwungnige Hügle guldig afa lüüchte. Der Schnee näb dr Strass überzieht es Glitzere vo tuusige chline Diamante. D Wolche si bluetroti Striche voreme unändlech töif blaue Himmel.
+
+Für ne Momänt merksch nüt vom Weschtwind. Usser dine Schritte wo im Schnee knirsche ghörsch nüt. Es isch scho fasch eigenartig – so fescht bisch dr vor Stadt gwahnet, dass de immer Outo ghörsch verbyfahre, wo immer du o bisch. Aber hie? We di nid bewegsch, isch es mucksmüüslistill.
+
+Es tschuderet di, und du bisch dr nid sicher, öb itz das wäg dr Chälti isch oder wäg öppis anderem.
+
+[[Du stygsch wieder i und fahrsch wyter-&gt;du fahrsch wyter]].
+
+(set: $conformity to it - 1)</tw-passagedata><tw-passagedata pid="13" name="du fahrsch wyter" tags="" position="800,325" size="100,100">Es geit nid lang, und das Schouschpiel isch verby. D Sunne geit under, und es wird schnäu mau fyschter.
+
+Die iibrächendi Dunkelheit machts nid eifacher, über die Höger z fahre. Du weisch: kes Navi cha dr hie wyterhäufe, du bisch uf di säuber gschteut, uf dini Erinnerig us dire Chindheit, wo d hinde im Oute ghocket bisch und usem Fäischter gluegt hesch, wo di Vater itz dürefahrt.
+
+Sit denn hett sech einiges veränderet. Es isch dr, aus wöuschti nachem Ufstah a Troum vo vergangener Nacht erinnere. Aber je meh das nach dene Fäde recksch, löse si sech uf.
+
+Hie, die Abzweigig?
+
+Hetts di denn scho gä?
+
+Du bisch dr nid sicher.
+
+Du chasch wyter [[graduus]] oder [[rächts abbiege]].</tw-passagedata><tw-passagedata pid="14" name="graduus" tags="" position="725,450" size="100,100">Du farsch wyter. Du bisch dr zimli sicher, dass de nächschtens wyder a ne [[Ort söttisch cho, woder bekannt isch.-&gt;crash]]
+
+</tw-passagedata><tw-passagedata pid="15" name="rächts abbiege" tags="" position="875,450" size="100,100">Du biegsch rächts ab. Schnäu geits ines Sytetal abe, ine Wald, und uf dr andere Syte wieder ufe. [[Du bisch dr nid sicher, öb du scho mau da bisch gsi-&gt;crash]].</tw-passagedata><tw-passagedata pid="16" name="crash" tags="" position="800,575" size="100,100">Du muesch aber aber iigeschtah, dass dr die iibrächendi Dunkelheit und dr Schnee dr z schaffe macht. Eigenartig, wie sech dr Charakter vore Landschaft so schnäu cha ändere.
+
+Du lahsch di vor Strass la füehre. Was blybt dr anders übrig – die Strass isch so schmal, du chönntisch nid dräie.
+
+Du redsch dr guet zue. So fescht chasch di ja nid verfahre. Über churz oder lang wirsch wieder imene Tal lande, wos e Houptstrass hett, und aaständigi Wägwys[[&#96;---&#96;-&gt;Strasse weg]]</tw-passagedata><tw-passagedata pid="17" name="Bremsen" tags="" position="800,825" size="100,100">Du drücksch uf d Bräms.
+
+Aber dr Schnee und z Schmelzwasser si so gschlifrig, dass d Reife ke Halt finge, und du is Tobel abe rütschisch.
+
+&lt;img src=&quot;pictures/unfall.png&quot;&gt;
+
+(set: $brakes to it + 1)
+(if: $brakes is &gt;= 3)[ [[Es lüpft di usem Sitz-&gt;Dis Outo überrollt sech]] ]
+(if: $brakes is &lt; 3)[ [[Brämse!-&gt;Bremsen]] ]</tw-passagedata><tw-passagedata pid="18" name="Strasse weg" tags="" position="800,700" size="100,100">Plötzlech isch vor dir d Strass wäg.
+
+Es gähnends Loch.
+
+Us de Ougewinkle gsesch no grad, dass de e Linkskurve verpasst hesch – und denn bääget aues i dir
+
+
+[[Brämse!-&gt;Bremsen]] </tw-passagedata><tw-passagedata pid="19" name="Dis Outo überrollt sech" tags="" position="800,950" size="100,100">Im Liecht vo dine Frontlampe gsesch plötzlech, wie sech dr Bode uf di zue kippet.
+
+Du verlürsch d Orientierig.
+
+E Tanne blitzt uf.
+
+Schnee.
+
+Es drückt di wieder i Sitz ine.
+
+No mau e Tanne?
+
+Denn polets, di Chopf tätscht gäg d Schybe
+
+es Knirsche
+
+irgendöppis mit dini Bei
+
+Schmärz explodiert
+
+
+
+
+
+
+[[es wird dunku-&gt;Dunkel]] 
+
+{
+&lt;!-- set up for the following passage --&gt;
+(set: $recovery to 0)
+
+(set: $wakePassages to (a:
+&quot;Dis Zimmer&quot;,
+&quot;Dis Zimmer&quot;,
+&quot;Dis Zimmer&quot;,
+&quot;Tee&quot;,
+&quot;Tee&quot;,
+&quot;Tee&quot;,
+&quot;Dunkel&quot;,
+))
+
+(set: $sleepPassages to (a:
+&quot;Huehn&quot;,
+&quot;Chatz&quot;,
+&quot;Schlaf&quot;,
+&quot;Schlaf&quot;,
+&quot;Schlaf&quot;,
+&quot;Schlaf&quot;,
+&quot;Schlaf&quot;,
+&quot;Schlaf&quot;,
+&quot;Troumlos&quot;,
+&quot;Troumlos&quot;,
+&quot;Troumlos&quot;,
+&quot;Troumlos&quot;,
+&quot;Troumlos&quot;,
+&quot;Troumlos&quot;,
+&quot;Troumlos&quot;,
+&quot;Bluet&quot;,
+&quot;Bluet&quot;,
+&quot;Bluet&quot;,
+&quot;Bluet&quot;,
+&quot;Bluet&quot;,
+))
+
+(set: $wakeUpVariations to (a: 
+&quot;Du zucksch zäme.&quot;, 
+&quot;Du wachsch uf.&quot;,
+&quot;Langsam gheit dr Schlaf vo dir ab.&quot;,
+&quot;Du schrecksch uf.&quot;
+))
+
+(set: $goToSleepVariations to (a:
+&quot;Du dämmerisch wäg.&quot;,
+&quot;Du schlafsch ii.&quot;,
+&quot;D Ouge wärde dr schwär.&quot;,
+&quot;Du sinksch zrügg is Chüssi.&quot;
+))
+}</tw-passagedata><tw-passagedata pid="20" name="Dis Zimmer" tags="" position="400,1250" size="100,100">{
+(if: ($recovery &gt; 3) and ($recovery &lt;= 5))[&lt;img src=&quot;pictures/zimmer_dunkel.png&quot;&gt;]
+(if: $recovery &gt; 5)[&lt;img src=&quot;pictures/zimmer.png&quot;&gt;]
+}
+Wachsch uf.
+{
+Versuechsch di z bewege(if: $recovery &lt; 2)[, und dumpfi Schmärze brönne sech dür dini Närve wie Lava dür ne Wald](if: $recovery &gt;= 2 and $recovery &lt; 4)[, und es tuet immer no höllisch weh].
+}{
+(if: $recovery &gt; 2)[Du tuesch süüferli d Ouge uf. Über dir … Holzbalke?] (if: $recovery &lt; 4)[Du probiersch di ufzrichte, aber du hesch ni gnüegend Chraft.]
+}{
+(if: $recovery &gt;= 4)[Dr Schmärz verebbt langsam. Aber es choschtet di immer no so viu Chraft, di o nume es bitzeli ufzrichte. Du luegsch ume. Es chliises Zimmer.]
+(if: $recovery &gt;= 5)[E Chachelofe git dr warm.]
+(if: $recovery &gt;= 6)[Ar Wand hanget dr Jesus.]
+}{
+(if: $recovery &gt;= 7)[Du richtisch di langsam uf. 
+(display: &quot;Explore Room&quot;) 
+(link-goto: &quot;Oder vyllech söttisch no chli schlafe.&quot;, (either: ...$sleepPassages)) ]
+(else:)[(link-goto: (either: ...$goToSleepVariations), (either: ...$sleepPassages))]
+}</tw-passagedata><tw-passagedata pid="21" name="Tee" tags="" position="525,1250" size="100,100">Du bisch wach.
+{
+(if: $recovery &lt; 3)[E Hand stützt di Chopf, richtet di uf. Es tuet weh. Du gschpürsch es Chacheli a dine Lippe. Tee. Du schlücksch, giirig.]
+(else:)[Und wieder Tee. E Hand wo dr hiuft. Wo dr wägputzt, wode gchoslet hesch. Du machsch d Ouge uf. (if: $recovery &lt; 6)[E Frou? Es Meitschi?]
+(else:)[E Frou. Zumene Zopf zämebundnigi Haar. Es glismet Jäggli.] Si luegt di a, schüttlet dr Chopf. «Schlaf». 
+(if: $recovery &gt;= 6)[Gsesch ihre Rock ir Tür verschwinde.]]
+}
+{
+(set: $recovery to it + 2)
+(link-goto: (either: ...$goToSleepVariations), (either: ...$sleepPassages))
+}</tw-passagedata><tw-passagedata pid="22" name="Huehn" tags="" position="1100,1250" size="100,100">(display: &quot;Flucht&quot;)
+
+Wyt wäg ghörsch e Güggu. Einisch, zwöi mau rüeft er. 
+
+Und denn, zmitzt im Ruef, wird er still.
+
+&lt;img src=&quot;pictures/traum.png&quot;&gt;
+
+Es isch sehr still.
+
+Mit eme Ruck wachsch uf. Du bisch bachnass verschwitzt.
+{
+(set: $sleepPassages to it - (a: &quot;Huehn&quot;))
+(set: $recovery to it - 1)
+(link-goto: &quot;…&quot;, (either: ...$wakePassages))
+}</tw-passagedata><tw-passagedata pid="23" name="Chatz" tags="" position="975,1250" size="100,100">(display: &quot;Flucht&quot;)
+
+Und denn, e Chatz wo miaut, wid no nie e Chatz ghört hesch.
+
+&lt;img src=&quot;pictures/traum.png&quot;&gt;
+
+Mit eme Ruck wachsch uf – und bereusch es sofort, dini Verletzige mäude sech grad wieder.
+
+Dis Bettzüg verschwitzt. Du bachnass.
+
+Das mit er Chatz hesch tröimt, oder?
+{
+(set: $recovery to it - 1)
+(set: $sleepPassages to it - (a: &quot;Chatz&quot;))
+(link-goto: &quot;…&quot;, (either: ...$wakePassages))
+}</tw-passagedata><tw-passagedata pid="24" name="Body" tags="" position="150,1375" size="100,100">Du luegsch a dir säuber abe. 
+
+Du steisch da i dire Underwäsch, dr Körper übersäit mit Blöiele und Schürfige.
+{
+(set: $hasBeenAwake to ((history:) contains &quot;Arm&quot;) or ((history:) contains &quot;Alarm&quot;))
+(if: $blood &gt; 0 and not $hasBeenAwake)[Di lingg Arm isch verbunde.]
+(if: $blood &gt; 0 and $hasBeenAwake)[I dim lingge Arm hetts e Schnittwunde wo nid verbunde isch.]
+}
+
+(display: &quot;Explore Room&quot;)</tw-passagedata><tw-passagedata pid="25" name="Arm" tags="" position="1175,1375" size="100,100">«Psscht!»
+
+D Frou zischt di a. Di Hand, wo grad vori no so sanft über di Arm gfahre isch, fixiert di. Du probiersch se abzschüttle, aber es isch, aus wärsch ine Schrubstock gspannt – da isch nüt zmache.
+
+(display: &quot;Alarm&quot;)</tw-passagedata><tw-passagedata pid="26" name="Alarm" tags="" position="1300,1375" size="100,100">«Still! Oder du verdirbsch aues»
+
+Di Hand blybt i ihrem Griff, du chasch di nid bewege. Du gsesch, wi dis Bluet dr Arm abrünnelet und i das Chacheli tröpfelet.
+
+Irgendeinisch schynt si gnue z ha, und si laht ab vo dir. Ohni es Wort steit si uf und geit usem Zimmer.
+(set: $sleepWithoutBlood to $sleepPassages - (a: &quot;Bluet&quot;))
+(link-goto: &quot;Dir wird schwarz vor de Ouge.&quot;, (either: ...$sleepWithoutBlood))</tw-passagedata><tw-passagedata pid="27" name="Frou" tags="" position="350,1625" size="100,100">&lt;img src=&quot;pictures/modi.png&quot;&gt;
+
+«Oh, du bisch ungstande!» seit d Frou wo vor dir steit. «I weiss nid, öb das guet isch, du bisch no sehr schwach. Du söttsch besser wieder go schlafe, und di nid aastränge.»
+
+(display: &quot;DialogFrau&quot;)</tw-passagedata><tw-passagedata pid="28" name="DialogFrau" tags="" position="350,1750" size="100,100">Du muesch meh wüsse.
+{
+(unless: (history:) contains &quot;«Was isch passiert?»&quot;)[* [[«Was isch passiert?»]] ]
+(unless: (history:) contains &quot;«Wo bini hie?»&quot;)[* [[«Wo bini hie?»]] ]
+(unless: (history:) contains &quot;«Wo bini hie?»&quot;)[(if: (history:) contains &quot;«Isch das dini Schwoscht gsi?»&quot;)[* [[«Isch das dini Schwoscht gsi?»]] ] ]
+}</tw-passagedata><tw-passagedata pid="29" name="«Was isch passiert?»" tags="" position="225,1875" size="100,100">«Du hesch en Unfall gha.»
+
+{
+(display: &quot;DialogFrau&quot;)
+* [[«Was isch mit mim Outo passiert?»-&gt;Das muess di nid kümmere]]
+}</tw-passagedata><tw-passagedata pid="30" name="«Wo bini hie?»" tags="" position="475,1875" size="100,100">D Frou luegt di a und meint de: «Du bisch nid vo hie, gäu?»
+
+«Auso, doch, i bi hie ufgwachse» findsch du.
+
+«Mi ghörts dim Dialäkt a. Du bisch nid vo hie.»
+
+(display: &quot;Si geit usem Zimmer&quot;)</tw-passagedata><tw-passagedata pid="31" name="Si geit usem Zimmer" tags="" position="350,2125" size="100,100">Si lächlet di a.
+
+«Hie. Das wird dr guet tue», seit si.
+
+Si steut dr es früsches Chacheli Tee häre und geit de usem Zimmer.
+
+&lt;img src=&quot;pictures/tasse.png&quot;&gt;
+
+{
+(display: &quot;Explore Room&quot;)
+* (link-goto: &quot;Du geisch zrügg is Bett und schlafsch um di z erhole.&quot;, (either: ...$sleepPassages))
+}</tw-passagedata><tw-passagedata pid="32" name="Explore Room" tags="" position="275,1250" size="100,100">* [[Wie gsehts äch dusse us?-&gt;Dr Wiler]]
+* [[Was isch mit dir passiert?-&gt;Body]]
+* [[Du geisch usem Zimmer use.-&gt;Verschlossnigi Tür]]
+&lt;!-- * [[Wo isch dis Handy?-&gt;Handy]] --&gt;</tw-passagedata><tw-passagedata pid="33" name="Flucht" tags="" position="1025,1375" size="100,100">&lt;img src=&quot;pictures/wald.png&quot;&gt;
+
+Du rennsch düre Wald. 
+
+Äscht und Wurzle chralle sich a dir fescht, haute di zrügg, verchratze dr Arme, Gsicht, Bei.
+
+Rennsch düre feschtgfrornig Schnee.
+
+Gspürsch wie d Wunde am Arm wieder ufplatzt isch, wie ds Bluet aberünnelet. Du hingerlasch e Spur us Bluet.
+
+Dr Wald hört nid uf.
+
+Es isch dunkel, und hinger jedem Boum touche immer no wyteri Stämm uf.
+
+Du weisch nid, wo de bisch. Du weisch nid, wode häre geisch.
+
+Du weisch nume, du muesch wäg.</tw-passagedata><tw-passagedata pid="34" name="Das muess di nid kümmere" tags="" position="225,2000" size="100,100">«Das muess di itz nid kümmere. Ds wichtigschte isch, dass de zersch mau wieder gsund wirsch.»
+
+Du wosch widerspräche, aber e Blick vo ire längt, dass de nüt seisch.
+
+(display: &quot;Si geit usem Zimmer&quot;)</tw-passagedata><tw-passagedata pid="35" name="«Isch das dini Schwoscht gsi?»" tags="" position="350,1875" size="100,100">Du zeigsch zum Fäischter, wode se grad gseh hesch düreloufe.
+
+Si lächlet di a. «Das isch scho möglech. Ig ha viu Gschwüschterti. Gott wott vo üs, dass mer üs vermehre. Das weisch du ja sicher.»
+
+Du lachsch chli närvös. «I bi nid würklech religiös», meinsch.
+
+«Und doch hett di Gott bhüetet. Du läbsch. Isch das nid öppis, wos wärt isch drüber nachezdänke? Villech gits meh zwüsche Himmel und Ärde aus du dänksch.»
+
+Du bisch dr nid sicher, was de da druf chasch säge. Aber dir dämmeret langsam, dass du vermuetlich bi Freichirchler glandet bisch. Usgrächnet! Anderersits: vo öpper anderem wärsch wahrschynlech nid so guet pflegt worde.
+
+(display: &quot;DialogFrau&quot;)</tw-passagedata><tw-passagedata pid="36" name="Verschlossnigi Tür" tags="" position="275,1375" size="100,100">Du wosch zum Zimmer us – aber es geit nid. D Tür isch verriglet. Du rüttlisch dranne.
+
+Denn ghörsch Schritte im Gang, und [[d Tür geit uf]].</tw-passagedata><tw-passagedata pid="37" name="d Tür geit uf" tags="" position="350,1500" size="100,100">{(if: (history:) contains &quot;d Tür geit uf&quot;)[(display: &quot;Es isch Zyt&quot;)]
+(else:)[(display: &quot;Frou&quot;)]}</tw-passagedata><tw-passagedata pid="38" name="Es isch Zyt" tags="" position="475,1625" size="100,100">D Frou chunnt i dis Zimmer.
+
+Und denn chunnt si no mau i dis Zimmer.
+
+Und denn no einisch.
+
+Du luegsch vor einte zur andere. Si gseh tupfgenauglych us.
+
+«Oh, dir syt … Drillinge?» chasch gagse.
+
+&lt;img src=&quot;pictures/chlone.png&quot;&gt;
+
+Si luege di unverwandt a.
+
+«Es isch Zyt», seit di erschti. 
+«Leg di a»
+
+Si gheie dr dini Chleider vor d Füess.
+
+«Zyt für was?», fragsch du. Uf einisch isch di Tatedurscht wie wägblase, und du füesch di definitiv no sehr verletzt und uf wagglige Bei.
+
+Si antworte dr nid.
+
+[[Du leisch d Chleider a.]]</tw-passagedata><tw-passagedata pid="39" name="Du leisch d Chleider a." tags="" position="1025,2027" size="100,100">Si packe di a de Arme. Da isch er wider, dä Schrubzwingegriff, wo so gar nid zu de schmächtige Körper passt.
+
+Du weisch, du bisch nid ime Zuestand, wo dr würd erloube, sehr viu Gägewehr z leischte. Besser, du lahsch das über di la ergah, o wede überhoupt nid weisch, was das itz söu.
+
+Si füehre di usem Zimmer, usem Hus use und ufe Hof. Dusse isch es no dunkler worde. Du chasch nid säge, was für ne Tageszyt das isch.
+
+Du machsch e haubhärzige Versuech, di loszrysse, aber es hiuft nüt: si schleppe di vore Schopf und [[gö ine-&gt;Geburt]].</tw-passagedata><tw-passagedata pid="40" name="Und lächlet di a" tags="" position="1050,2200" size="100,100">Du muesch wäg.
+
+Itz.
+
+Du merksch, dass dini Begleiterinne di nümme so fescht im Griff hei wie vorhär.
+
+Mit dr Chraft vomene Verzwyflete windisch di us dire Jagge, röuelisch di düre Stroh, und [[secklisch i Richtig Usgang-&gt;Flucht Real]].</tw-passagedata><tw-passagedata pid="41" name="Frontispice" tags="" position="600,50" size="100,100">&lt;h1&gt;Im Ämmital&lt;/h1&gt;
+Es bärndütsches Gschichtli
+
+&lt;cite&gt;Kaspar Manz &amp; David Stark&lt;/cite&gt;
+
+[[Start]]</tw-passagedata><tw-passagedata pid="42" name="Credits" tags="" position="1025,50" size="100,100">&lt;h3&gt;Credits&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th&gt;Text &amp; Konzept&lt;/th&gt;&lt;td&gt;&lt;a href=&quot;https://xeophin.net/worlds&quot;&gt;Kaspar Manz&lt;/a&gt; (&lt;a href=&quot;https://twitter.com/xeophin&quot;&gt;Twitter&lt;/a&gt;)&lt;/td&gt;
+&lt;tr&gt;&lt;th&gt;Illuschtratione&lt;/th&gt;&lt;td&gt;&lt;a href=&quot;https://zarkonnen.com&quot;&gt;David Stark&lt;/a&gt; (&lt;a href=&quot;https://twitter.com/zarkonnen_com&quot;&gt;Twitter&lt;/a&gt;)&lt;/td&gt;
+&lt;tr&gt;&lt;th&gt;Zusätzlechi Referänz-Föteli&lt;/th&gt;&lt;td&gt;&lt;a href=&quot;http://raeknowler.com&quot;&gt;Rae Knowler&lt;/a&gt; (&lt;a href=&quot;https://twitter.com/RaeKnowler&quot;&gt;Twitter&lt;/a&gt;)&lt;/td&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Erstellt im Rahme vom Global Game Jam 2019 in Züri ir Rote Fabrik.&lt;/p&gt;
+
+==&gt;&lt;==
+&lt;p&gt;&lt;em&gt;Merci fürs Spiele!&lt;/em&gt;&lt;/p&gt;
+[[Nomau vo vore? -&gt;Start]]</tw-passagedata><tw-passagedata pid="43" name="Schlaf" tags="" position="850,1250" size="100,100">Dunkelheit.
+
+Es isch dr, aus gheitisch ine nachtschwarzi Töifi abe. 
+
+
+Du weisch nid, wo unde und wo obe isch.
+
+
+
+
+Jedi Bewegig wode machsch laht Wälle vo Schmärz dür di Körper fluete.
+
+
+
+
+Du wosch bääge, um Hilf rüefe
+
+
+
+
+und bringsch ke Ton use.
+
+
+
+(link-goto: (either: ...$wakeUpVariations), (either: ...$wakePassages))
+(set: $recovery to it + 1)</tw-passagedata><tw-passagedata pid="44" name="Troumlos" tags="" position="1350,1250" size="100,100">Du gheisch ine troumlose Schlaf.
+
+Weisch nid, wode bisch.
+
+
+
+Wär de bisch.
+
+
+
+
+
+
+
+
+Wenn de bisch.
+
+
+
+
+
+
+
+
+Ewigi Nacht.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(link-goto: (either: ...$wakeUpVariations), (either: ...$wakePassages))
+(set: $recovery to it + 1)</tw-passagedata></tw-storydata>
