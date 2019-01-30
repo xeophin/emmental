@@ -1,0 +1,582 @@
+<tw-storydata name="In the Emmental" startnode="41" creator="Twine" creator-version="2.2.1" ifid="2CACB0E8-E4B9-411D-A656-C9DA6A20498B" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,600');
+
+body {
+  background-color: black;
+}
+
+tw-link, a {
+  color: white !important;
+  border-bottom: 1px dotted #FFF;
+  text-decoration: none;
+}
+
+tw-story { 
+  font-family: 'EB Garamond', Garamond, serif;
+  font-feature-settings: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table th {
+  text-align: left;
+}
+
+table td,
+table th {
+  padding: 0 1em 1ex 0;
+}
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+
+
+
+
+</script><tw-tag name="Protagonist" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="725,50" size="100,100">Your grandfather was happy that you visited him once again. During the year, you&#39;re usually too busy - it&#39;s quite a trip to his little home in the Emmental. But you took a few days off before Christmas, which gave you an opportunity to visit.
+
+Snow covered the hills over the last few days, but now the wind has changed. The west wind drives shreds of clouds across the sky and sweeps the snow off the firs that now stand on the hills, black-grey.
+
+It&#39;s getting dark, and you&#39;re on your way home. Of course, you could simply drive along [[the main road home]]. Or you could take the scenic route [[over the hills]].
+
+(set:$conformity to 0)</tw-passagedata><tw-passagedata pid="2" name="Dunkel" tags="" position="650,1250" size="100,100">{
+(set: $recovery to it + 1)
+}
+It&#39;s dark. (if: $recovery &gt; 4)[Morning? Evening? You don&#39;t know.]
+
+(if: $recovery &lt; 3)[You&#39;re... alive?](if: $recovery &gt;= 3)[You&#39;re alive.]
+
+(if: $recovery &lt; 2)[Blood rushes in your ears.](if: $recovery &gt;= 4)[It&#39;s very quiet here.]
+
+(link-goto: (either: ...$goToSleepVariations), (either: ...$sleepPassages))
+</tw-passagedata><tw-passagedata pid="3" name="Handy" tags="" position="525,1375" size="100,100">Das Modi chunnt immer mau wieder I sis Zimmer und versorgt ne. Mit dr Zyt cha ner ufstah und es paar Schritt mache. Sis Handy hett zwar no grad e chli Strom, aber er hett ke Verbindig, und da es am Antänne sueche isch, isch es innert chürzi tod.
+[[Dr Wiler]] </tw-passagedata><tw-passagedata pid="4" name="Dr Wiler" tags="" position="400,1375" size="100,100">You look out of the window.
+
+You can&#39;t see much. Is it evening again already?
+
+&lt;img src=&quot;pictures/wiler.png&quot;&gt;
+
+A few farm houses between twisted apple trees.
+
+A barn. A dog house.
+
+The roof is so low that you can barely glimpse the sky.
+
+Nothing moves. Or...
+
+The woman who&#39;s been taking care of you is walking past the trees. She vanishes into the barn.
+
+[[You can hear the door of your room opening.-&gt;d Tür geit uf]]</tw-passagedata><tw-passagedata pid="5" name="Bluet" tags="" position="1225,1250" size="100,100">A bright pain in your left arm. You moan.
+{
+(set: $sleepWithoutBlood to $sleepPassages - (a: &quot;Bluet&quot;))
+(if: $recovery &gt; 4)[&lt;img src=&quot;pictures/arm.png&quot;&gt;]
+}
+{
+(if: $recovery &gt; 2)[You feel a hand on your arm.]
+(if: $recovery &gt; 3)[The blood, dripping.]
+(if: $recovery &gt; 4)[You open your eyes and see a woman standing next to you.]
+(if: $recovery &gt; 5)[She&#39;s holding a tea-cup, just underneath the wound, collecting the drops of blood.]}{
+(if: $recovery &gt; 6)[
+* [[You pull back your arm.-&gt;Arm]]
+* [[«What are you doing?!»-&gt;Alarm]]
+]
+* (link-goto: &quot;…&quot;, (either: ...$sleepWithoutBlood))
+}
+
+(set: $recovery to it - 1)
+(set: $blood to it + 1)</tw-passagedata><tw-passagedata pid="6" name="Geburt" tags="" position="887,2111" size="100,100">Inside the barn there is near-total darkness. A single small window provides some light. You wait for your eyes to adjust.
+
+There&#39;s more people in the barn. At first, you think it&#39;s more relatives of the three women, but then you realise there&#39;s more to it.
+
+They all look the same. Exactly the same.
+
+This has to be another dream.
+
+It definitely has to be a dream, because in the center of the barn, on a bed of straw, surrounded by identical women
+
+An egg.
+
+An egg of absurd size.
+
+&lt;img src=&quot;pictures/ei.png&quot;&gt;
+
+You can&#39;t imagine what kind of animal could lay such an egg. Its top is level with your hips. It&#39;s covered in brown smears.
+
+The two women force you to your knees in front of the egg. Their grip never wavers.
+
+And now you can see what&#39;s lying in front of the egg. A beheaded cockerel. And a dead cat. Your eyes stray to the cut in your arm. You&#39;re pretty sure you know now what the brown smears on the egg are.
+
+«What is this? What are you doing?»
+
+No one answers.
+
+The egg starts to move.
+
+A sound. A crack spreads along the egg. It widens. You can&#39;t look away.
+
+The egg breaks open. Inside, covered with slime, barely moving, is a woman. She looks just like the others.
+
+Her breath is fast and shallow. One of the women approaches her and hands her the dead bird. She accepts it with shaky hands.
+
+She bites into it.
+
+Rips the flesh from the bones, swallows. Devours it with what little strength she can muster.
+
+And as she does, she becomes stronger. You can see it.
+
+She gets up on all fours and moves towards the cat. Plunges her teeth into the body. Tears and chews. Bones break. Her face is smeared with blood.
+
+She burps. She is much stronger now. But she doesn&#39;t have the strength she  needs yet. She gets up.
+
+&lt;img src=&quot;pictures/modi_bluet.png&quot;&gt;
+
+[[She smiles at you.-&gt;Und lächlet di a]]</tw-passagedata><tw-passagedata pid="7" name="Flucht Real" tags="" position="887,2261" size="100,100">You got lucky. You surprised them. But you don&#39;t have a lot of time. You keep running, blindly, away, just away from here.
+
+You hear their voices behind you. Away. Into the forest, where you can lose them.
+
+(display: &quot;Flucht&quot;)
+
+You hear dogs behind you.
+
+&lt;img src=&quot;pictures/hund.png&quot;&gt;
+
+[[And then you hear a voice.-&gt;Rettig]]</tw-passagedata><tw-passagedata pid="8" name="Rettig" tags="" position="887,2411" size="100,100">She appears from behind a tree. One of the women.
+
+She puts her finger to her lips.
+
+It could be the one that took care of you, but you can&#39;t be sure.
+
+She looks at you for a long time. Your coat is in her hands, but she makes no move to give it to you.
+
+Then she makes a decision. She points out a direction.
+
+«That way. To the village. Go. I&#39;ll distract them.»
+
+Without another word, she turns and runs off, dragging the coat behind her.
+
+So you run. Along the creek. Towards [[the village-&gt;Im Dorf]].</tw-passagedata><tw-passagedata pid="9" name="Im Dorf" tags="" position="1203,2415" size="100,100">You&#39;re not sure how long you run. Then you see lights flickering between the trees. She told you the truth!
+
+You make it to the village. A normal village. You find the biggest building. It&#39;s a pub called the Bear. Of course.
+
+You stumble in and collapse on the floor.
+
+«They all look identical! They&#39;re born from eggs! I barely escaped with my life!»
+
+Hands pick you up, examine your wounds.
+
+You keep telling them. You have to tell them.
+
+People talk across one another.
+
+You&#39;re brought to a bed. They give you tea.
+
+«What can lay such an egg?»
+
+You hear sirens. Good. The police will take care of it.
+
+It&#39;s an ambulance. You&#39;re put on a gurney and carried in.
+
+People try to calm you down.
+
+«The police! I have to talk to the police! They&#39;re killing people!»
+
+The people around you nod.
+
+You&#39;re carried out of the ambulance again.
+
+A new face.
+
+«Don&#39;t you worry now. We&#39;re going to a quiet place where no one can harm you.»
+
+==&gt;&lt;==
+[[//~Credits~//-&gt;Credits]] </tw-passagedata><tw-passagedata pid="10" name="the main road home" tags="ending" position="901,183" size="100,100">Visiting granddad once a year, that&#39;s lovely. But in a way, you&#39;re always happy when you&#39;re heading back into the city. As nice it is to see the hills again, those companions of childhood, you always have the feeling that something might crawl out of a shadowed ravine at any time.
+
+You don&#39;t want to admit it to yourself, but you&#39;re relieved when you see that the main road has been cleared of snow, that there&#39;s no ice. There&#39;s little traffic and you make good progress. The west wind drives the clouds across the darkening sky.
+
+Soon enough you&#39;re past Burdlef and on the motorway on-ramp, on your way home to the city.
+
+==&gt;&lt;==
+[[//~Credits~//-&gt;Credits]] 
+
+(set:$conformity to it + 1)</tw-passagedata><tw-passagedata pid="11" name="over the hills" tags="" position="725,200" size="100,100">The last time you were in a car going through these hills, you were on the back seat. Your dad was driving. Now you have your own car and with the west wind blowing, you have a sudden desire to see the hills. A little detour won&#39;t hurt.
+
+You take a turn off the main road in the valley and enter a narrow little road that leads you into the forest. The road winds along the hill. After a sharp turn, you emerge from the forest. The detour was worth it.
+
+&lt;img src=&quot;pictures/auto.png&quot;&gt;
+
+[[You stop the car at the edge of the road.]] Or [[you keep driving]].
+
+(set: $conformity to it - 1)</tw-passagedata><tw-passagedata pid="12" name="You stop the car at the edge of the road." tags="" position="650,325" size="100,100">You stop the car at the edge of the road, turn off the engine, and get out.
+
+The last rays of the sun touch the gently rolling snowy hills. They glow like gold. The snow next to the road glitters like a thousand little diamonds. The clouds are blood-red strokes on an infinitely deep blue sky.
+
+For a moment, the west wind is gone. You hear nothing but the crunch of the snow under your feet. It&#39;s strange. You are so used to the city, cars always driving by, wherever you are. But here? If you don&#39;t move, it&#39;s absolutely quiet.
+
+A shiver runs down your spine, and you&#39;re not sure if it&#39;s the cold or something else.
+
+[[You get back into your car and keep driving-&gt;you keep driving]].
+
+(set: $conformity to it - 1)</tw-passagedata><tw-passagedata pid="13" name="you keep driving" tags="" position="800,325" size="100,100">Soon after, the sun sets, and the glittering landscape is plunged into darkness.
+
+In the dark, it&#39;s harder to navigate these hills. You know that your satnav is useless here. You have to rely on yourself, on your childhood memories of sitting in the back of the car, looking out of the window as your dad drove you through the night.
+
+A lot has changed since then. You feel like you&#39;re recalling a dream, and the more you grasp for your memories, the more they dissolve.
+
+Here, this turn?
+
+Did this road even exist back then?
+
+You&#39;re not sure.
+
+Drive on [[straight-&gt;graduus]] or [[turn right-&gt;rächts abbiege]].</tw-passagedata><tw-passagedata pid="14" name="graduus" tags="" position="632,457" size="100,100">You keep going straight. You&#39;re pretty sure that you&#39;ll find a more familiar landmark [[soon-&gt;crash]].</tw-passagedata><tw-passagedata pid="15" name="rächts abbiege" tags="" position="875,450" size="100,100">You turn right. The road rapidly descends into a side valley, into the woods, and then back up again on the other side. [[You are not sure if you have been here before-&gt;crash]].</tw-passagedata><tw-passagedata pid="16" name="crash" tags="" position="800,575" size="100,100">You have to admit to yourself that the darkness and the snow is weighing on you. It&#39;s strange how the mood of a landscape can change so easily.
+
+You keep going along the road. You have no choice - it&#39;s too narrow to turn safely.
+
+You reassure yourself. You can&#39;t get that lost. Sooner or later you&#39;ll arrive in a valley with a main road with actual[[&#96;---&#96;-&gt;Strasse weg]]</tw-passagedata><tw-passagedata pid="17" name="Bremsen" tags="" position="800,825" size="100,100">You hit the brakes.
+
+But the tyres can find no traction in the snow and the melt. You slide into the ravine.
+
+&lt;img src=&quot;pictures/unfall.png&quot;&gt;
+
+(set: $brakes to it + 1)
+(if: $brakes is &gt;= 3)[ [[A sudden shock.-&gt;Dis Outo überrollt sech]] ]
+(if: $brakes is &lt; 3)[ [[Hit the brakes!-&gt;Bremsen]] ]</tw-passagedata><tw-passagedata pid="18" name="Strasse weg" tags="" position="800,700" size="100,100">The road in front of you is gone.
+
+A great black hole opens up in front of you.
+
+Out of the corner of your eye you can see that you missed a sudden left turn. Every fiber of your being tenses, screams -
+
+[[Hit the brakes!-&gt;Bremsen]] </tw-passagedata><tw-passagedata pid="19" name="Dis Outo überrollt sech" tags="" position="800,950" size="100,100">The headlights illuminate the ground tilting towards you.
+
+You tumble.
+
+A fir tree flashes up.
+
+Snow.
+
+You are pushed against your seat.
+
+Another tree?
+
+A crash, and your head hits the side window.
+
+A crunch.
+
+Something&#39;s wrong with your legs.
+
+Pain explodes
+
+
+
+
+
+
+[[darkness-&gt;Dunkel]] 
+
+{
+&lt;!-- set up for the following passage --&gt;
+(set: $recovery to 0)
+
+(set: $wakePassages to (a:
+&quot;Dis Zimmer&quot;,
+&quot;Dis Zimmer&quot;,
+&quot;Dis Zimmer&quot;,
+&quot;Tee&quot;,
+&quot;Tee&quot;,
+&quot;Tee&quot;,
+&quot;Dunkel&quot;,
+))
+
+(set: $sleepPassages to (a:
+&quot;Huehn&quot;,
+&quot;Chatz&quot;,
+&quot;Schlaf&quot;,
+&quot;Schlaf&quot;,
+&quot;Schlaf&quot;,
+&quot;Schlaf&quot;,
+&quot;Schlaf&quot;,
+&quot;Schlaf&quot;,
+&quot;Troumlos&quot;,
+&quot;Troumlos&quot;,
+&quot;Troumlos&quot;,
+&quot;Troumlos&quot;,
+&quot;Troumlos&quot;,
+&quot;Troumlos&quot;,
+&quot;Troumlos&quot;,
+&quot;Bluet&quot;,
+&quot;Bluet&quot;,
+&quot;Bluet&quot;,
+&quot;Bluet&quot;,
+&quot;Bluet&quot;,
+))
+
+(set: $wakeUpVariations to (a: 
+&quot;You jerk awake.&quot;, 
+&quot;You wake up.&quot;,
+&quot;You regain consciousness.&quot;,
+&quot;You awake with a start.&quot;
+))
+
+(set: $goToSleepVariations to (a:
+&quot;You fade into sleep.&quot;,
+&quot;You fall asleep.&quot;,
+&quot;Your eyes close of their own accord.&quot;,
+&quot;You sink back into bed.&quot;
+))
+}</tw-passagedata><tw-passagedata pid="20" name="Dis Zimmer" tags="" position="400,1250" size="100,100">{
+(if: ($recovery &gt; 3) and ($recovery &lt;= 5))[&lt;img src=&quot;pictures/zimmer_dunkel.png&quot;&gt;]
+(if: $recovery &gt; 5)[&lt;img src=&quot;pictures/zimmer.png&quot;&gt;]
+}
+You wake up.
+{
+You try to move(if: $recovery &lt; 2)[. Sullen pain burns through your nerves like lava through a forest](if: $recovery &gt;= 2 and $recovery &lt; 4)[. It still hurts like hell].
+}{
+(if: $recovery &gt; 2)[You carefully open your eyes. Above you - wooden beams?] (if: $recovery &lt; 4)[You try to sit up, but you&#39;re still too weak.]
+}{
+(if: $recovery &gt;= 4)[The pain is receding, but it still takes all your strength just to sit up. You look around. A small room.]
+(if: $recovery &gt;= 5)[A masonry stove.]
+(if: $recovery &gt;= 6)[A crucifix on the wall.]
+}{
+(if: $recovery &gt;= 7)[You slowly sit up. 
+(display: &quot;Explore Room&quot;) 
+(link-goto: &quot;Or maybe I should sleep some more.&quot;, (either: ...$sleepPassages)) ]
+(else:)[(link-goto: (either: ...$goToSleepVariations), (either: ...$sleepPassages))]
+}</tw-passagedata><tw-passagedata pid="21" name="Tee" tags="" position="525,1250" size="100,100">You&#39;re awake.
+{
+(if: $recovery &lt; 3)[A hand, supporting your head, helping you sit up a little. It hurts. You feel a cup at your lips. Tea. You swallow, eagerly.]
+(else:)[More tea. The helping hand. The hand that cleans away the tea you failed to swallow. You open your eyes. (if: $recovery &lt; 6)[A woman? A girl?]
+(else:)[A woman. Carefully braided hair. A knitted cardigan.] She looks at you and shakes her head. «Sleep». 
+(if: $recovery &gt;= 6)[You see her long skirt vanishing through the door.]]
+}
+{
+(set: $recovery to it + 2)
+(link-goto: (either: ...$goToSleepVariations), (either: ...$sleepPassages))
+}</tw-passagedata><tw-passagedata pid="22" name="Huehn" tags="" position="1100,1250" size="100,100">(display: &quot;Flucht&quot;)
+
+You hear a cockerel, far away. Once, he crows. Twice.
+
+He starts a third time, and is suddenly silent.
+
+&lt;img src=&quot;pictures/traum.png&quot;&gt;
+
+It&#39;s very quiet.
+
+You awake with a start. You&#39;re soaked with sweat.
+{
+(set: $sleepPassages to it - (a: &quot;Huehn&quot;))
+(set: $recovery to it - 1)
+(link-goto: &quot;…&quot;, (either: ...$wakePassages))
+}</tw-passagedata><tw-passagedata pid="23" name="Chatz" tags="" position="975,1250" size="100,100">(display: &quot;Flucht&quot;)
+
+You hear a cat meowing - screaming? You never heard a cat make that sound before.
+
+&lt;img src=&quot;pictures/traum.png&quot;&gt;
+
+And you&#39;re awake. And you wish you weren&#39;t, because now the pain is even worse.
+
+You&#39;re soaked with sweat.
+
+You dreamt the bit with the cat, right?
+{
+(set: $recovery to it - 1)
+(set: $sleepPassages to it - (a: &quot;Chatz&quot;))
+(link-goto: &quot;…&quot;, (either: ...$wakePassages))
+}</tw-passagedata><tw-passagedata pid="24" name="Body" tags="" position="150,1375" size="100,100">You look down at your body.
+
+You&#39;re standing in your underwear. Your body is covered in scrapes and bruises.
+{
+(set: $hasBeenAwake to ((history:) contains &quot;Arm&quot;) or ((history:) contains &quot;Alarm&quot;))
+(if: $blood &gt; 0 and not $hasBeenAwake)[There&#39;s a bandage on your left arm.]
+(if: $blood &gt; 0 and $hasBeenAwake)[There&#39;s a deep cut on your left arm.]
+}
+
+(display: &quot;Explore Room&quot;)</tw-passagedata><tw-passagedata pid="25" name="Arm" tags="" position="1175,1375" size="100,100">«Shh!»
+
+The woman shushes you. Her hand, so gentle until now, clamps down on your arm. You try to pull away, but her grip is like a vise.
+
+(display: &quot;Alarm&quot;)</tw-passagedata><tw-passagedata pid="26" name="Alarm" tags="" position="1300,1375" size="100,100">«Hold still! You&#39;re going to mess everything up!»
+
+Your arm is locked in her grip. You watch as your blood runs out of the wound and drips into the cup.
+
+After a long time, she&#39;s apparently collected enough. She lets go of your arm and leaves the room without saying another word.
+
+(set: $sleepWithoutBlood to $sleepPassages - (a: &quot;Bluet&quot;))
+(link-goto: &quot;Your vision goes dark.&quot;, (either: ...$sleepWithoutBlood))</tw-passagedata><tw-passagedata pid="27" name="Frou" tags="" position="350,1625" size="100,100">&lt;img src=&quot;pictures/modi.png&quot;&gt;
+
+«Oh, you got up!» the woman in front of you exclaims. «I&#39;m not sure if that&#39;s a good idea. You&#39;re still very weak. You should sleep more and not exhaust yourself.»
+
+(display: &quot;DialogFrau&quot;)</tw-passagedata><tw-passagedata pid="28" name="DialogFrau" tags="" position="350,1750" size="100,100">You have to know more.
+{
+(unless: (history:) contains &quot;«Was isch passiert?»&quot;)[* [[«What happened?»-&gt;«Was isch passiert?»]] ]
+(unless: (history:) contains &quot;«Wo bini hie?»&quot;)[* [[«Where am I?»-&gt;«Wo bini hie?»]] ]
+(unless: (history:) contains &quot;«Wo bini hie?»&quot;)[(if: (history:) contains &quot;«Isch das dini Schwoscht gsi?»&quot;)[* [[«Was that your sister?»-&gt;«Isch das dini Schwoscht gsi?»]] ] ]
+}</tw-passagedata><tw-passagedata pid="29" name="«Was isch passiert?»" tags="" position="225,1875" size="100,100">«You had an accident.»
+
+{
+(display: &quot;DialogFrau&quot;)
+* [[«What happened to my car?»-&gt;Das muess di nid kümmere]]
+}</tw-passagedata><tw-passagedata pid="30" name="«Wo bini hie?»" tags="" position="475,1875" size="100,100">The woman looks at you.
+
+«You&#39;re not from around here, are you?»
+
+«Well, actually, I did grow up around here.»
+
+«I can hear it in your dialect. You&#39;re not from around here.»
+
+(display: &quot;Si geit usem Zimmer&quot;)</tw-passagedata><tw-passagedata pid="31" name="Si geit usem Zimmer" tags="" position="350,2125" size="100,100">She smiles at you.
+
+«Here. This will do you good.»
+
+She gives you a fresh cup of tea and leaves the room.
+
+&lt;img src=&quot;pictures/tasse.png&quot;&gt;
+
+{
+(display: &quot;Explore Room&quot;)
+* (link-goto: &quot;You return to bed to get more rest.&quot;, (either: ...$sleepPassages))
+}</tw-passagedata><tw-passagedata pid="32" name="Explore Room" tags="" position="275,1250" size="100,100">* [[What does the outside look like, you wonder?-&gt;Dr Wiler]]
+* [[What happened to you?-&gt;Body]]
+* [[You leave the room.-&gt;Verschlossnigi Tür]]
+&lt;!-- * [[Wo isch dis Handy?-&gt;Handy]] --&gt;</tw-passagedata><tw-passagedata pid="33" name="Flucht" tags="" position="1025,1375" size="100,100">&lt;img src=&quot;pictures/wald.png&quot;&gt;
+
+You&#39;re running through the woods.
+
+Branches and roots grab and tear at you, scratch your arms, face, legs.
+
+You&#39;re running through the frozen snow.
+
+The wound on your arm has broken open again and is weeping blood. A red trail behind you.
+
+The trees never stop.
+
+It&#39;s dark, and the trees never stop.
+
+You don&#39;t know where you are. You don&#39;t know where you are going.
+
+You only know that you need to get away.</tw-passagedata><tw-passagedata pid="34" name="Das muess di nid kümmere" tags="" position="225,2000" size="100,100">«Don&#39;t worry about that now. You need to get well again first.»
+
+Her face makes it clear that it&#39;s pointless to disagree.
+
+(display: &quot;Si geit usem Zimmer&quot;)</tw-passagedata><tw-passagedata pid="35" name="«Isch das dini Schwoscht gsi?»" tags="" position="350,1875" size="100,100">You point at the window, where you just saw her walk past.
+
+She smiles at you. «That&#39;s possible. I have many sisters. God wants us to be fruitful and multiply. You know that, surely.»
+
+You laugh nervously. «I&#39;m not really... religious.»
+
+«And yet God protected you. You&#39;re alive. Isn&#39;t that something you should give some thought to? Perhaps there is more between heaven and earth after all, yes?»
+
+You&#39;re not sure what to answer to that. You realise that you probably ended up in a fringe religious community. Such fun! Then again, they have been really taking care of you.
+
+(display: &quot;DialogFrau&quot;)</tw-passagedata><tw-passagedata pid="36" name="Verschlossnigi Tür" tags="" position="275,1375" size="100,100">You try to leave the room. The door is locked. You rattle at the lock.
+
+You hear footsteps outside. [[The door opens.-&gt;d Tür geit uf]]</tw-passagedata><tw-passagedata pid="37" name="d Tür geit uf" tags="" position="350,1500" size="100,100">{(if: (history:) contains &quot;d Tür geit uf&quot;)[(display: &quot;Es isch Zyt&quot;)]
+(else:)[(display: &quot;Frou&quot;)]}</tw-passagedata><tw-passagedata pid="38" name="Es isch Zyt" tags="" position="475,1625" size="100,100">The woman enters your room.
+
+And then she enters the room again.
+
+And again.
+
+You look at the three of them. They look absolutely identical.
+
+«Oh, you&#39;re... triplets?» you manage to get out.
+
+&lt;img src=&quot;pictures/chlone.png&quot;&gt;
+
+They look at you.
+
+«It&#39;s time», the first one says.
+
+«Get dressed.»
+
+They throw your clothes onto the floor in front of you.
+
+«Time for what?», you ask. All your strength drains out of you once more. You feel very injured and wobbly. You want to go back to bed.
+
+You get no answer.
+
+[[You put on your clothes.-&gt;Du leisch d Chleider a.]]</tw-passagedata><tw-passagedata pid="39" name="Du leisch d Chleider a." tags="" position="1025,2027" size="100,100">Two of them take you by the arms. A vise-like grip, an unexpected strength from such thin bodies.
+
+You know that you&#39;re in no state to resist. It&#39;s better to bear with whatever they&#39;re planning.
+
+You have no idea what they&#39;re planning.
+
+They lead you out of the door, out of the house, and along the path. It&#39;s even darker outside now. You really can&#39;t tell what time of day it is.
+
+You make a half-hearted effort to break free, but it comes to naught. They march you to the barn.
+
+[[You enter.-&gt;Geburt]]</tw-passagedata><tw-passagedata pid="40" name="Und lächlet di a" tags="" position="1050,2200" size="100,100">You need to escape.
+
+Now.
+
+You realise that your captors are no longer holding on to you that much.
+
+With desperate strength, you twist out of your coat, roll across the straw, and [[run for the door-&gt;Flucht Real]].</tw-passagedata><tw-passagedata pid="41" name="Frontispice" tags="" position="600,50" size="100,100">&lt;h1&gt;In the Emmental&lt;/h1&gt;
+A little story from Berne
+
+&lt;cite&gt;Kaspar Manz &amp; David Stark&lt;/cite&gt;
+
+[[Start]]
+
+&lt;a href=&quot;index.html&quot;&gt;Bärndütsch&lt;/a&gt;</tw-passagedata><tw-passagedata pid="42" name="Credits" tags="" position="1025,50" size="100,100">&lt;h3&gt;Credits&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th&gt;Original Text &amp; Concept&lt;/th&gt;&lt;td&gt;&lt;a href=&quot;https://xeophin.net/worlds&quot;&gt;Kaspar Manz&lt;/a&gt; (&lt;a href=&quot;https://twitter.com/xeophin&quot;&gt;Twitter&lt;/a&gt;)&lt;/td&gt;
+&lt;tr&gt;&lt;th&gt;Illustrations &amp; English Translation&lt;/th&gt;&lt;td&gt;&lt;a href=&quot;https://zarkonnen.com&quot;&gt;David Stark&lt;/a&gt; (&lt;a href=&quot;https://twitter.com/zarkonnen_com&quot;&gt;Twitter&lt;/a&gt;)&lt;/td&gt;
+&lt;tr&gt;&lt;th&gt;Additional Reference Photography&lt;/th&gt;&lt;td&gt;&lt;a href=&quot;http://raeknowler.com&quot;&gt;Rae Knowler&lt;/a&gt; (&lt;a href=&quot;https://twitter.com/RaeKnowler&quot;&gt;Twitter&lt;/a&gt;)&lt;/td&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Created as part of Global Game Jam 2019 at Rote Fabrik in Zurich.&lt;/p&gt;
+
+==&gt;&lt;==
+&lt;p&gt;&lt;em&gt;Thanks for playing!&lt;/em&gt;&lt;/p&gt;
+[[Play again? -&gt;Start]]</tw-passagedata><tw-passagedata pid="43" name="Schlaf" tags="" position="850,1250" size="100,100">Darkness.
+
+You feel that you are plummeting into night-dark depths.
+
+You can&#39;t tell up from down.
+
+Your attempts to move unleash waves of pain.
+
+You want to scream, to call for help
+
+you can&#39;t make a sound.
+
+
+
+(link-goto: (either: ...$wakeUpVariations), (either: ...$wakePassages))
+(set: $recovery to it + 1)</tw-passagedata><tw-passagedata pid="44" name="Troumlos" tags="" position="1350,1250" size="100,100">You fall into a dreamless sleep.
+
+You don&#39;t know where you are.
+
+
+
+Who you are.
+
+
+
+When you are.
+
+
+
+Eternal night.
+
+
+
+
+
+
+
+(link-goto: (either: ...$wakeUpVariations), (either: ...$wakePassages))
+(set: $recovery to it + 1)</tw-passagedata></tw-storydata>
